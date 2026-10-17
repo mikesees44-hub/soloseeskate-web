@@ -96,6 +96,11 @@ nav a:hover,nav a:focus-visible{color:var(--bone)}
 .photo figcaption{font:400 .72rem var(--f-type);letter-spacing:.16em;color:var(--ash);text-transform:uppercase;margin-top:10px;text-align:right}
 .photo .stamp{position:absolute;top:-14px;right:-8px;background:var(--red);color:#fff;font:400 .78rem var(--f-type);letter-spacing:.16em;text-transform:uppercase;padding:.45em .8em;transform:rotate(4deg)}
 
+.yt-hero{justify-self:center;width:min(100%,340px)}
+.yt-frame{position:relative;aspect-ratio:9/16;background:#000;border:2px solid var(--bone);box-shadow:10px 10px 0 var(--red);overflow:hidden}
+.yt-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-hero figcaption a{color:var(--ash)}
+.yt-hero figcaption a:hover{color:var(--bone)}
 /* section heads */
 section{padding-block:clamp(44px,7vw,84px)}
 .shead{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px;border-bottom:1px dashed var(--rule);padding-bottom:14px}
@@ -191,10 +196,12 @@ footer small{color:var(--ash);font:400 .78rem var(--f-type);letter-spacing:.1em}
         <p class="lede">Heavy washed-black tees, hoodies and hats from Solo Sees Studios LLC. Screen-print grit, halftone photos and a brush-drawn star. Printed to order and shipped from the USA in about a week.</p>
         <div class="ctas"><a class="btn red" href="#shop">Shop the drop</a><a class="btn" href="#lookbook">See the lookbook</a></div>
       </div>
-      <figure class="photo">
-        <span class="stamp">Drop 01</span>
-        <img src="hero_photo.jpg" alt="Halftone photo of a skater mid-air over a concrete ledge with palm trees behind" width="1100" height="882">
-        <figcaption>Photo tee art &middot; halftone print</figcaption>
+      <figure class="photo yt-hero">
+        <span class="stamp">Latest on YouTube</span>
+        <div class="yt-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUHLayyl7SGbU2P1EQ0X-X5A&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="Latest videos from Solo Sees on YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <figcaption><a href="https://www.youtube.com/@Solo_Sees/shorts" target="_blank" rel="noopener">More Shorts at @Solo_Sees &rarr;</a></figcaption>
       </figure>
     </div>
   </section>
