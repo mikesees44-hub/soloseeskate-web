@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Solo Sees Skate Division</title>
+<meta name="description" content="Solo Sees Skate Division: washed-black tees, hoodies and hats from Solo Sees Studios LLC, Wildwood NJ. Printed to order, shipped from the USA.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Solo Sees Skate Division">
+<meta property="og:title" content="Solo Sees Skate Division">
+<meta property="og:description" content="Tees, hoodies and hats from Solo Sees Studios LLC. Depends how you see it.">
+<meta property="og:url" content="https://soloseeskate.com/">
+<meta property="og:image" content="https://soloseeskate.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e0e0f">
+<link rel="canonical" href="https://soloseeskate.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Solo Sees Studios LLC","alternateName":"Solo Sees Skate Division","url":"https://soloseeskate.com/","logo":"https://soloseeskate.com/badge.png","address":{"@type":"PostalAddress","addressLocality":"Wildwood","addressRegion":"NJ","addressCountry":"US"},"sameAs":["https://www.etsy.com/shop/Solosees","https://solosees.co/","https://soloseesstudio.com/","https://www.instagram.com/solo_sees/"]}</script>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Graduate&family=Special+Elite&family=Archivo+Narrow:wght@400;600;700&family=Kaushan+Script&display=swap">
+<style>
+/* Layout: photocopied skate zine. Torn black pages, a halftone hero, one red brush stroke per section. */
+:root{
+  --asphalt:#0e0e0f;     /* page */
+  --sheet:#18181a;       /* raised paper */
+  --bone:#efe9dc;        /* ink */
+  --ash:#9d978b;         /* muted text */
+  --red:#d2232a;         /* the one accent */
+  --rule:#2c2b2e;
+  --f-head:"Graduate","Archivo Narrow",Impact,sans-serif;
+  --f-type:"Special Elite","Courier New",monospace;
+  --f-body:"Archivo Narrow","Arial Narrow",Arial,sans-serif;
+  --f-brush:"Kaushan Script","Brush Script MT",cursive;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--asphalt)}
+body{background:var(--asphalt);color:var(--bone);font:400 1.06rem/1.55 var(--f-body);margin:0;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--asphalt)}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+/* grain over everything */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;mix-blend-mode:screen;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--asphalt) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:34px;width:auto}
+.brand span{font:400 .72rem var(--f-type);letter-spacing:.18em;color:var(--ash);text-transform:uppercase}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{font:600 .82rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ash)}
+nav a:hover,nav a:focus-visible{color:var(--bone)}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:700 .9rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:.85em 1.3em;border:2px solid var(--bone);color:var(--bone);background:transparent;transition:background .15s,color .15s,transform .15s}
+.btn:hover,.btn:focus-visible{background:var(--bone);color:var(--asphalt);transform:translateY(-1px)}
+.wildwood,.signup{border-top:1px solid var(--rule);padding:clamp(40px,6vw,72px) 0}
+.wildwood .wrap,.signup .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px}
+.wildwood .wrap>div,.signup .wrap>div{flex:1 1 380px;max-width:620px}
+.wildwood h2,.signup h2{font:400 clamp(1.6rem,4vw,2.4rem)/1.1 var(--f-head);margin:0 0 8px}
+.wildwood p,.signup p{color:#d9d3c6;margin:0}
+.su-form{flex:1 1 340px;display:flex;flex-wrap:wrap;gap:10px;max-width:480px}
+.su-form input[type=email]{flex:1 1 220px;min-width:0;font:400 1rem var(--f-body);padding:.85em 1em;background:var(--sheet);color:var(--bone);border:2px solid var(--rule)}
+.su-form input[type=email]:focus{border-color:var(--bone);outline:none}
+.su-form small{flex-basis:100%;color:var(--ash);font-size:.8rem}
+.su-form small a{color:var(--ash)}
+.hp,.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.red:hover,.btn.red:focus-visible{background:#fff;border-color:#fff;color:var(--asphalt)}
+:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
+
+/* hero */
+.hero{padding-block:clamp(28px,6vw,64px) 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,56px);align-items:center}
+.hero h1{margin:0;line-height:.9}
+.hero h1 img{width:min(100%,560px);height:auto;display:block}
+.kicker{font:400 .8rem var(--f-type);letter-spacing:.24em;text-transform:uppercase;color:var(--ash);margin:0 0 14px}
+.division{font:400 clamp(1.6rem,4.2vw,2.9rem)/1 var(--f-head);letter-spacing:.06em;margin:18px 0 6px}
+.tag{font:400 clamp(1rem,2vw,1.25rem) var(--f-type);letter-spacing:.06em;margin:0 0 6px;position:relative;display:inline-block}
+.tag::after{content:"";position:absolute;left:-2%;right:-4%;bottom:-10px;height:9px;background:var(--red);border-radius:50% 40% 60% 30%/60% 50% 50% 40%;transform:rotate(-1.6deg)}
+.hero p.lede{max-width:46ch;color:var(--ash);margin:30px 0 26px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.photo{position:relative;margin:0}
+.photo img{width:100%;height:auto;display:block;filter:contrast(1.05)}
+.photo figcaption{font:400 .72rem var(--f-type);letter-spacing:.16em;color:var(--ash);text-transform:uppercase;margin-top:10px;text-align:right}
+.photo .stamp{position:absolute;top:-14px;right:-8px;background:var(--red);color:#fff;font:400 .78rem var(--f-type);letter-spacing:.16em;text-transform:uppercase;padding:.45em .8em;transform:rotate(4deg)}
+
+/* section heads */
+section{padding-block:clamp(44px,7vw,84px)}
+.shead{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px;border-bottom:1px dashed var(--rule);padding-bottom:14px}
+.shead h2{font:400 clamp(1.7rem,4vw,2.6rem)/1 var(--f-head);letter-spacing:.05em;margin:0;text-wrap:balance}
+.shead p{margin:0;color:var(--ash);font:400 .85rem var(--f-type);letter-spacing:.08em;max-width:52ch}
+
+/* filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.filters button{font:600 .78rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;padding:.55em 1em;background:transparent;color:var(--ash);border:1px solid var(--rule);cursor:pointer}
+.filters button[aria-pressed="true"]{color:var(--asphalt);background:var(--bone);border-color:var(--bone)}
+
+/* product grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--sheet);border:1px solid var(--rule);display:flex;flex-direction:column;min-width:0;position:relative}
+.card .num{position:absolute;top:10px;left:12px;font:400 .72rem var(--f-type);letter-spacing:.12em;color:var(--ash)}
+.card .img{aspect-ratio:9/10;max-width:100%;display:grid;place-items:center;padding:30px 18px 6px;background:radial-gradient(ellipse at 50% 40%,#232226 0%,var(--sheet) 70%)}
+.card .img img{max-height:100%;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.55))}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font:700 1.08rem/1.2 var(--f-body);letter-spacing:.06em;text-transform:uppercase}
+.card .meta{margin:0;color:var(--ash);font-size:.9rem}
+.card .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}
+.price{font:400 1.25rem var(--f-type);font-variant-numeric:tabular-nums}
+.soon{font:400 .78rem var(--f-type);letter-spacing:.16em;text-transform:uppercase;color:var(--ash);border:1px dashed var(--ash);padding:.65em .9em;white-space:nowrap}
+.alert{background:var(--red);color:#fff}
+.alert .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:10px}
+.alert p{margin:0;font:400 .85rem var(--f-type);letter-spacing:.12em;text-transform:uppercase}
+.alert a{font:700 .8rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.drop{border:1px dashed var(--rule);padding:22px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;margin-top:26px}
+.drop h3{margin:0 0 4px;font:400 1.3rem var(--f-head);letter-spacing:.05em}
+.drop p{margin:0;color:var(--ash);max-width:60ch}
+@media (max-width:620px){.drop{grid-template-columns:1fr}}
+.card .btn{padding:.7em 1em;font-size:.78rem}
+
+/* cult hero band */
+.cult{background:var(--sheet);border-block:1px solid var(--rule);overflow:hidden}
+.cult .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(20px,4vw,52px);align-items:center}
+.cult h2{font:400 clamp(3rem,10vw,6.6rem)/.86 var(--f-brush);color:var(--red);margin:0;transform:rotate(-4deg);text-wrap:balance}
+.cult p{color:var(--ash);max-width:48ch}
+.cult .pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cult .pair img{width:100%;height:auto;display:block}
+
+/* lookbook */
+.lookbook figure{margin:0;border:1px solid var(--rule);background:var(--sheet);padding:10px}
+.lookbook img{width:100%;height:auto;display:block}
+.lookbook figcaption{font:400 .75rem var(--f-type);letter-spacing:.12em;color:var(--ash);padding-top:10px;text-transform:uppercase}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px)}
+.about h2{font:400 clamp(1.7rem,4vw,2.6rem)/1.05 var(--f-head);margin:0 0 14px;letter-spacing:.04em}
+.about p{max-width:60ch;color:var(--bone)}
+.about p+p{color:var(--ash)}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:12px;align-content:start}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:14px;border-bottom:1px dashed var(--rule);padding-bottom:12px}
+.facts b{font:400 .78rem var(--f-type);letter-spacing:.14em;text-transform:uppercase;color:var(--ash);padding-top:3px}
+
+footer{border-top:1px solid var(--rule);padding-block:34px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer img{height:44px;width:auto}
+footer small{color:var(--ash);font:400 .78rem var(--f-type);letter-spacing:.1em}
+
+@media (max-width:820px){
+  .hero .wrap,.cult .wrap,.about .wrap{grid-template-columns:1fr}
+  .photo .stamp{right:0}
+  nav{display:none}
+  .facts li{grid-template-columns:1fr;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="grain" aria-hidden="true"></div>
+
+<div class="alert" role="region" aria-label="Drop announcement">
+  <div class="wrap"><p>Drop 01 is coming soon &middot; Tees, hoodies &amp; hats</p><a href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Follow the shop for the drop &rarr;</a></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Solo Sees Skate Division home"><img src="wordmark.png" alt="SoloSees"><span>Skate Division</span></a>
+    <nav aria-label="Sections"><a href="#shop">Shop</a><a href="#cult">Cult Hero</a><a href="#lookbook">Lookbook</a><a href="#about">About</a></nav>
+    <a class="btn red" id="shopTop" href="#shop">See the drop</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Solo Sees Studios LLC &middot; Drop 01 &middot; Fall 2026</p>
+        <h1 id="h1"><img src="wordmark.png" alt="SoloSees"></h1>
+        <p class="division">Skate Division</p>
+        <p class="tag">Depends how you see it.</p>
+        <p class="lede">Heavy washed-black tees, hoodies and hats from Solo Sees Studios LLC. Screen-print grit, halftone photos and a brush-drawn star. Printed to order and shipped from the USA in about a week.</p>
+        <div class="ctas"><a class="btn red" href="#shop">Shop the drop</a><a class="btn" href="#lookbook">See the lookbook</a></div>
+      </div>
+      <figure class="photo">
+        <span class="stamp">Drop 01</span>
+        <img src="hero_photo.jpg" alt="Halftone photo of a skater mid-air over a concrete ledge with palm trees behind" width="1100" height="882">
+        <figcaption>Photo tee art &middot; halftone print</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <div class="shead">
+        <h2 id="shop-h">The Drop</h2>
+        <p>Drop 01 isn't on sale yet. Prices are set, and each piece gets a Buy it now button the day it goes live.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter products">
+        <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+        <button type="button" id="f-tee" data-f="tee" aria-pressed="false">Tees</button>
+        <button type="button" id="f-hood" data-f="hood" aria-pressed="false">Hoodies</button>
+        <button type="button" id="f-hat" data-f="hat" aria-pressed="false">Hats</button>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="drop">
+        <div><h3>Want first pick?</h3><p>Follow the Solosees shop on Etsy. Followers get a notification when Drop 01 goes live, before we post it anywhere else.</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn red" href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Follow on Etsy</a><a class="btn" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener">Instagram @solo_sees</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cult" id="cult" aria-labelledby="cult-h">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Sub-line</p>
+        <h2 id="cult-h">Cult Hero</h2>
+        <p>The Solo Sees film side, worn on the street. Red drip lettering and the SoloSees script on a washed-black tee or hoodie.</p>
+        <a class="btn red" href="#shop" data-jump="cult">Shop Cult Hero</a>
+      </div>
+      <div class="pair">
+        <img src="tee_cult.png" alt="Washed black Cult Hero tee with red drip CULT HERO lettering" loading="lazy">
+        <img src="hood_cult.png" alt="Washed black Cult Hero hoodie with the same graphic" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="lookbook" id="lookbook" aria-labelledby="lb-h">
+    <div class="wrap">
+      <div class="shead"><h2 id="lb-h">Lookbook</h2><p>The full Skate Division line: tees, hoodies, hats, pants, patches and decks. More pieces drop as they're ready.</p></div>
+      <figure>
+        <img src="lookbook.jpg" alt="Solo Sees Skate Division lookbook showing star, photo, Cult Hero and Skate Division tees and hoodies, hats, a beanie, pants, patches and three skate decks" loading="lazy" width="1312" height="1199">
+        <figcaption>Drop 01 concept board &middot; pants, patches and decks coming later</figcaption>
+      </figure>
+      <figure style="margin-top:18px">
+        <img src="lookbook2.jpg" alt="Skate Division graphics sheet: drip SoloSees script, S-star, round Skate Division crest, Cult Hero, Team Rider and See It Shoot It Show It" loading="lazy" width="1400" height="933">
+        <figcaption>Graphics sheet &middot; S-star, crest, Team Rider, See it. Shoot it. Show it.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="ab-h">
+    <div class="wrap">
+      <div>
+        <h2 id="ab-h">From Solo Sees Studios LLC</h2>
+        <p>Solo Sees Studios LLC makes films and the clothes that go with them. The Skate Division is the street side of the studio: what we wear to the park and the set.</p>
+        <p>Nothing sits in a warehouse. Each piece is printed when you order it, then shipped straight to you, so there's no overstock and no waste.</p>
+      </div>
+      <ul class="facts">
+        <li><b>Blanks</b><span>Mineral-washed boxy tees and heavyweight hoodies</span></li>
+        <li><b>Print</b><span>Direct-to-garment, soft water-based ink. Hats are embroidered.</span></li>
+        <li><b>Ships from</b><span>USA. About 4 to 7 days from order to door.</span></li>
+        <li><b>Checkout</b><span>Etsy, with Etsy's buyer protection, from launch day</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wildwood" id="wildwood" aria-labelledby="ww-h">
+    <div class="wrap">
+      <div>
+        <h2 id="ww-h">Down the shore?</h2>
+        <p>The studio's Wildwood collection is on sale now: Smug Seagull tees, Jersey Shore mugs, boardwalk postcards and soy candles, designed by a fifth-generation Wildwood local.</p>
+      </div>
+      <a class="btn red" href="https://www.etsy.com/shop/Solosees?utm_source=soloseeskate&amp;utm_medium=site&amp;utm_campaign=wildwood" target="_blank" rel="noopener">Shop the Wildwood collection</a>
+    </div>
+  </section>
+
+  <section class="signup" id="signup" aria-labelledby="su-h">
+    <div class="wrap">
+      <div>
+        <h2 id="su-h">Get Drop 01 first</h2>
+        <p>One email the day the drop goes live, with a launch-day code for 15% off. No spam, unsubscribe any time.</p>
+      </div>
+      <form name="drop-list" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company" class="su-form">
+        <input type="hidden" name="form-name" value="drop-list">
+        <p class="hp" aria-hidden="true"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
+        <label for="su-email" class="sr">Email address</label>
+        <input id="su-email" type="email" name="email" required placeholder="you@email.com" autocomplete="email">
+        <button class="btn red" type="submit">Notify me</button>
+        <small>By signing up you agree to our <a href="policies.html#privacy">privacy policy</a>.</small>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="badge.png" alt="" aria-hidden="true" style="height:84px">
+    <small>Solo Sees Skate Division is a line from <a href="https://solosees.co/" target="_blank" rel="noopener">Solo Sees Studios LLC</a><br>&copy; 2026 Solo Sees Studios LLC &middot; All rights reserved &middot; Depends how you see it.<br><a href="policies.html#privacy">Privacy</a> &middot; <a href="policies.html#terms">Terms</a> &middot; <a href="policies.html#shipping">Shipping</a> &middot; <a href="policies.html#returns">Returns</a> &middot; <a href="policies.html#ip">Copyright</a> &middot; <a href="policies.html#contact">Contact</a><br>More from the studio: <a href="https://solosees.co/" target="_blank" rel="noopener">solosees.co</a> &middot; <a href="https://soloseesstudio.com/" target="_blank" rel="noopener">Solo Sees Script Studio</a></small>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Etsy shop</a><a class="btn" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener">Instagram @solo_sees</a></div>
+  </div>
+</footer>
+
+<script>
+// Each product's Buy it now opens its Etsy listing. Until a listing is live, it opens the Etsy shop.
+const SHOP = "https://www.etsy.com/shop/Solosees";
+const PRODUCTS = [
+  {n:"01", name:"OG Star Tee", kind:"tee", img:"tee_og.png", meta:"Washed black boxy tee, brush star front", price:28, etsy:null},
+  {n:"02", name:"Photo Tee", kind:"tee", img:"tee_photo.png", meta:"Bone tee, halftone skate photo", price:28, etsy:null},
+  {n:"03", name:"Cult Hero Tee", kind:"tee cult", img:"tee_cult.png", meta:"Washed black tee, red drip lettering", price:28, etsy:null},
+  {n:"04", name:"Skate Division Tee", kind:"tee", img:"tee_sd.png", meta:"Washed black tee, S-star and drip script", price:28, etsy:null},
+  {n:"05", name:"Team Rider Tee", kind:"tee", img:"tee_team.png", meta:"Washed black tee, drip lettering", price:28, etsy:null},
+  {n:"06", name:"See It Shoot It Show It Tee", kind:"tee", img:"tee_see.png", meta:"Washed black tee, the filmmaker's rule", price:28, etsy:null},
+  {n:"07", name:"Division Badge Tee", kind:"tee", img:"tee_badge.png", meta:"Washed black tee, round crest", price:28, etsy:null},
+  {n:"08", name:"OG Star Hoodie", kind:"hood", img:"hood_og.png", meta:"Heavyweight washed hoodie, S-star", price:64, etsy:null},
+  {n:"09", name:"Photo Hoodie", kind:"hood", img:"hood_photo.png", meta:"Heavyweight hoodie, halftone photo", price:66, etsy:null},
+  {n:"10", name:"Cult Hero Hoodie", kind:"hood cult", img:"hood_cult.png", meta:"Heavyweight hoodie, red drip lettering", price:66, etsy:null},
+  {n:"11", name:"Skate Division Hoodie", kind:"hood", img:"hood_sd.png", meta:"Heavyweight hoodie, S-star and drip script", price:64, etsy:null},
+  {n:"12", name:"S-Star Dad Hat", kind:"hat", img:"hat_star.png", meta:"Embroidered S-star", price:30, etsy:null},
+  {n:"13", name:"Script Snapback", kind:"hat", img:"hat_wm.png", meta:"Embroidered SoloSees script", price:32, etsy:null},
+  {n:"14", name:"S-Star Beanie", kind:"hat", img:"beanie.png", meta:"Cuffed knit, embroidered S-star", price:26, etsy:null}
+];
+const grid = document.getElementById("grid");
+function render(f){
+  grid.innerHTML = "";
+  PRODUCTS.filter(p => f==="all" || p.kind.split(" ").includes(f)).forEach(p => {
+    const el = document.createElement("article");
+    el.className = "card";
+    const cta = p.etsy
+      ? `<a class="btn red" href="${p.etsy}" target="_blank" rel="noopener" aria-label="Buy it now: ${p.name} on Etsy">Buy it now</a>`
+      : `<span class="soon" aria-label="${p.name} is coming soon">Coming soon</span>`;
+    el.innerHTML = `<span class="num">No. ${p.n}</span>
+      <div class="img"><img src="${p.img}" alt="${p.name} preview" loading="lazy"></div>
+      <div class="body"><h3>${p.name}</h3><p class="meta">${p.meta}</p>
+      <div class="row"><span class="price">$${p.price}</span>${cta}</div></div>`;
+    grid.appendChild(el);
+  });
+}
+const btns = [...document.querySelectorAll(".filters button")];
+function setFilter(f){ btns.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.f===f))); render(f); }
+btns.forEach(b => b.addEventListener("click", () => setFilter(b.dataset.f)));
+document.querySelector('[data-jump="cult"]').addEventListener("click", () => setFilter("cult"));
+render("all");
+</script>
+
+</html>
