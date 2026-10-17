@@ -304,6 +304,12 @@ footer small{color:var(--ash);font:400 .78rem var(--f-type);letter-spacing:.1em}
 // Each product's Buy it now opens its Etsy listing. Until a listing is live, it opens the Etsy shop.
 const SHOP = "https://www.etsy.com/shop/Solosees";
 const PRODUCTS = [
+  // Drop 01 designs: set buy:"<Shopify product link>" once each product is live
+  {n:"15", name:"Moon Tee", kind:"tee", img:"tee_moon.png", meta:"Mineral-wash boxy tee, crescent moon and motto", price:34, buy:null},
+  {n:"16", name:"Bird Cage Tee", kind:"tee", img:"tee_birdcage.png", meta:"Mineral-wash boxy tee, birdcage and motto", price:34, buy:null},
+  {n:"17", name:"Star Tee", kind:"tee", img:"tee_star.png", meta:"Black boxy tee, worn-in sparkle star", price:34, buy:null},
+  {n:"18", name:"Skater Moon Tee", kind:"tee", img:"tee_skatermoon.png", meta:"Heavyweight boxy tee, big moon back print", price:42, buy:null},
+  {n:"19", name:"Hourglass Tee", kind:"tee", img:"tee_hourglass.png", meta:"Heavyweight boxy tee, celestial line-art back print", price:42, buy:null},
   {n:"01", name:"OG Star Tee", kind:"tee", img:"tee_og.png", meta:"Washed black boxy tee, brush star front", price:28, etsy:null},
   {n:"02", name:"Photo Tee", kind:"tee", img:"tee_photo.png", meta:"Bone tee, halftone skate photo", price:28, etsy:null},
   {n:"03", name:"Cult Hero Tee", kind:"tee cult", img:"tee_cult.png", meta:"Washed black tee, red drip lettering", price:28, etsy:null},
@@ -325,8 +331,9 @@ function render(f){
   PRODUCTS.filter(p => f==="all" || p.kind.split(" ").includes(f)).forEach(p => {
     const el = document.createElement("article");
     el.className = "card";
-    const cta = p.etsy
-      ? `<a class="btn red" href="${p.etsy}" target="_blank" rel="noopener" aria-label="Buy it now: ${p.name} on Etsy">Buy it now</a>`
+    const link = p.buy || p.etsy;
+    const cta = link
+      ? `<a class="btn red" href="${link}" target="_blank" rel="noopener" aria-label="Buy it now: ${p.name}">Buy it now</a>`
       : `<span class="soon" aria-label="${p.name} is coming soon">Coming soon</span>`;
     el.innerHTML = `<span class="num">No. ${p.n}</span>
       <div class="img"><img src="${p.img}" alt="${p.name} preview" loading="lazy"></div>
