@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Checkout Test | Solo Sees Skate Division</title>
+<style>
+:root{--ink:#f4efe2;--bg:#141414;--sheet:#1d1d1d;--rule:#333;--red:#c8102e;--ash:#9a958a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6rem;margin:0 0 6px}.note{color:var(--ash);margin:0 0 20px}
+.banner{border:1px dashed var(--red);padding:12px 14px;margin-bottom:22px;font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{background:var(--sheet);border:1px solid var(--rule);padding:14px;min-height:200px}
+#status{color:var(--ash);margin-top:16px;font-size:.9rem}
+a{color:var(--ink)}
+</style></head><body><div class="wrap">
+<h1>Checkout test</h1>
+<p class="note">This page tests the cart and checkout that soloseeskate.com will use. It is hidden from search engines.</p>
+<div class="banner"><strong>Test mode:</strong> these are Shopify's public demo products, not ours. Add one to the cart and click Checkout to see the payment page. Don't enter a real card. Once our store's code is added, the real shop uses this same cart.</div>
+<div class="grid" id="grid"></div>
+<p id="status">Loading the test store…</p>
+<p><a href="/">← Back to soloseeskate.com</a></p>
+</div>
+<script>
+const TEST = { domain: "graphql.myshopify.com", token: "dd4d4dc146542ba7763305d71d1b3d38" };
+const BTN = { "background-color": "#c8102e", ":hover": { "background-color": "#a50d26" }, ":focus": { "background-color": "#a50d26" }, "border-radius": "0" };
+const st = document.getElementById("status");
+const sc = document.createElement("script");
+sc.src = "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
+sc.onerror = () => st.textContent = "Couldn't load Shopify's cart script.";
+sc.onload = async () => {
+  try {
+    const client = ShopifyBuy.buildClient({ domain: TEST.domain, storefrontAccessToken: TEST.token });
+    const products = await client.product.fetchAll(3);
+    const ui = await ShopifyBuy.UI.onReady(client);
+    products.forEach(p => {
+      const node = document.createElement("div"); node.className = "card"; document.getElementById("grid").appendChild(node);
+      ui.createComponent("product", { id: p.id, node,
+        options: { product: { text: { button: "Add to cart" }, styles: { button: BTN, title: { color: "#f4efe2" }, price: { color: "#f4efe2" } } },
+                   cart: { text: { title: "Your cart", button: "Checkout" }, styles: { button: BTN }, popup: false },
+                   toggle: { styles: { toggle: { "background-color": "#c8102e" } } } } });
+    });
+    st.textContent = products.length ? "Test store loaded: " + products.length + " demo products." : "The test store returned no products.";
+  } catch (e) { st.textContent = "Test store error: " + (e && e.message || e); }
+};
+document.head.appendChild(sc);
+</script></body></html>
