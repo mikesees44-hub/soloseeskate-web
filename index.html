@@ -67,6 +67,15 @@ nav a:hover,nav a:focus-visible{color:var(--bone)}
 .su-form small{flex-basis:100%;color:var(--ash);font-size:.8rem}
 .su-form small a{color:var(--ash)}
 .hp,.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.social{display:inline-flex;align-items:center;gap:.6em;padding:.55em 1.05em .55em .6em;border-radius:999px;background:#fff;color:#111;text-decoration:none;font:600 .95rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;letter-spacing:0;text-transform:none;border:1px solid #dbdbdb;transition:transform .15s,box-shadow .15s}
+.social:hover,.social:focus-visible{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.social .ico{width:28px;height:28px;border-radius:8px;display:inline-grid;place-items:center;flex:none}
+.social.ig .ico{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.social.ig .ico img{width:17px;height:17px}
+.social.yt .ico{background:none;width:34px}
+.social.yt .ico img{width:34px;height:24px}
+.social small{display:block;font:400 .72rem/1.2 inherit;color:#666;margin-top:2px}
+.social span.t{display:flex;flex-direction:column;align-items:flex-start}
 .btn.red{background:var(--red);border-color:var(--red);color:#fff}
 .btn.red:hover,.btn.red:focus-visible{background:#fff;border-color:#fff;color:var(--asphalt)}
 :focus-visible{outline:2px dashed var(--red);outline-offset:3px}
@@ -205,7 +214,7 @@ footer small{color:var(--ash);font:400 .78rem var(--f-type);letter-spacing:.1em}
       <div class="grid" id="grid"></div>
       <div class="drop">
         <div><h3>Want first pick?</h3><p>Follow the Solosees shop on Etsy. Followers get a notification when Drop 01 goes live, before we post it anywhere else.</p></div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn red" href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Follow on Etsy</a><a class="btn" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener">Instagram @solo_sees</a><a class="btn" href="https://www.youtube.com/@Solo_Sees" target="_blank" rel="noopener">YouTube @Solo_Sees</a></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn red" href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Follow on Etsy</a><a class="social ig" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener" aria-label="Follow @solo_sees on Instagram"><span class="ico"><img src="https://cdn.simpleicons.org/instagram/white" alt="" width="17" height="17"></span><span class="t">Instagram<small>@solo_sees</small></span></a><a class="social yt" href="https://www.youtube.com/@Solo_Sees" target="_blank" rel="noopener" aria-label="Watch @Solo_Sees on YouTube"><span class="ico"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="" width="34" height="24"></span><span class="t">YouTube<small>@Solo_Sees</small></span></a></div>
       </div>
     </div>
   </section>
@@ -297,7 +306,7 @@ footer small{color:var(--ash);font:400 .78rem var(--f-type);letter-spacing:.1em}
   <div class="wrap">
     <img src="badge.png" alt="" aria-hidden="true" style="height:84px">
     <small>Solo Sees Skate Division is a line from <a href="https://solosees.co/" target="_blank" rel="noopener">Solo Sees Studios LLC</a><br>&copy; 2026 Solo Sees Studios LLC &middot; All rights reserved &middot; Depends how you see it.<br><a href="policies.html#privacy">Privacy</a> &middot; <a href="policies.html#terms">Terms</a> &middot; <a href="policies.html#shipping">Shipping</a> &middot; <a href="policies.html#returns">Returns</a> &middot; <a href="policies.html#ip">Copyright</a> &middot; <a href="policies.html#contact">Contact</a><br>More from the studio: <a href="https://solosees.co/" target="_blank" rel="noopener">solosees.co</a> &middot; <a href="https://soloseesstudio.com/" target="_blank" rel="noopener">Solo Sees Script Studio</a></small>
-    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Etsy shop</a><a class="btn" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener">Instagram @solo_sees</a><a class="btn" href="https://www.youtube.com/@Solo_Sees" target="_blank" rel="noopener">YouTube @Solo_Sees</a></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Etsy shop</a><a class="social ig" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener" aria-label="Follow @solo_sees on Instagram"><span class="ico"><img src="https://cdn.simpleicons.org/instagram/white" alt="" width="17" height="17"></span><span class="t">Instagram<small>@solo_sees</small></span></a><a class="social yt" href="https://www.youtube.com/@Solo_Sees" target="_blank" rel="noopener" aria-label="Watch @Solo_Sees on YouTube"><span class="ico"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="" width="34" height="24"></span><span class="t">YouTube<small>@Solo_Sees</small></span></a></div>
   </div>
 </footer>
 
