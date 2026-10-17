@@ -109,6 +109,7 @@ section{padding-block:clamp(44px,7vw,84px)}
 .card .meta{margin:0;color:var(--ash);font-size:.9rem}
 .card .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}
 .price{font:400 1.25rem var(--f-type);font-variant-numeric:tabular-nums}
+.buy{min-width:150px;flex:1 1 150px}
 .soon{font:400 .78rem var(--f-type);letter-spacing:.16em;text-transform:uppercase;color:var(--ash);border:1px dashed var(--ash);padding:.65em .9em;white-space:nowrap}
 .alert{background:var(--red);color:#fff}
 .alert .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:10px}
@@ -319,20 +320,58 @@ const PRODUCTS = [
   {n:"13", name:"Script Snapback", kind:"hat", img:"hat_wm.png", meta:"Embroidered SoloSees script", price:32, etsy:null},
   {n:"14", name:"S-Star Beanie", kind:"hat", img:"beanie.png", meta:"Cuffed knit, embroidered S-star", price:26, etsy:null}
 ];
+/* ---- Shopify checkout (Buy Button) ----
+   Turn on: paste the Buy Button channel's Storefront access token below,
+   then give each product its Shopify product ID as  shopify:"1234567890".
+   Orders then go to Shopify, and Tapstitch / NinjaPOD / BoardPusher print and ship them. */
+const SHOPIFY = { domain: "jut1i5-p0.myshopify.com", token: "" };
+const CHECKOUT_ON = () => !!SHOPIFY.token;
+let shopUI = null;
+function loadShopify(){
+  if (shopUI) return shopUI;
+  shopUI = new Promise((res, rej) => {
+    const go = () => {
+      const client = ShopifyBuy.buildClient({ domain: SHOPIFY.domain, storefrontAccessToken: SHOPIFY.token });
+      ShopifyBuy.UI.onReady(client).then(res, rej);
+    };
+    if (window.ShopifyBuy && window.ShopifyBuy.UI) return go();
+    const sc = document.createElement("script");
+    sc.async = true; sc.src = "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
+    sc.onload = go; sc.onerror = rej; document.head.appendChild(sc);
+  });
+  return shopUI;
+}
+const BTN = { "background-color": "#c8102e", ":hover": { "background-color": "#a50d26" }, ":focus": { "background-color": "#a50d26" },
+  "font-family": "inherit", "text-transform": "uppercase", "letter-spacing": ".12em", "border-radius": "0", "font-size": "13px", "padding-top": "12px", "padding-bottom": "12px" };
+function mountBuy(p, node){
+  loadShopify().then(ui => ui.createComponent("product", {
+    id: p.shopify, node, moneyFormat: "%24%7B%7Bamount%7D%7D",
+    options: {
+      product: { iframe: true, contents: { img: false, title: false, price: false, options: true, quantity: false, button: true },
+        text: { button: "Add to cart" }, styles: { button: BTN, product: { "text-align": "left" } } },
+      cart: { text: { title: "Your cart", button: "Checkout", notice: "Shipping and taxes calculated at checkout." },
+        styles: { button: BTN }, popup: false },
+      toggle: { styles: { toggle: { "background-color": "#c8102e", ":hover": { "background-color": "#a50d26" } } } }
+    }
+  })).catch(() => { node.innerHTML = `<span class="soon">Coming soon</span>`; });
+}
 const grid = document.getElementById("grid");
 function render(f){
   grid.innerHTML = "";
   PRODUCTS.filter(p => f==="all" || p.kind.split(" ").includes(f)).forEach(p => {
     const el = document.createElement("article");
     el.className = "card";
-    const cta = p.etsy
-      ? `<a class="btn red" href="${p.etsy}" target="_blank" rel="noopener" aria-label="Buy it now: ${p.name} on Etsy">Buy it now</a>`
+    const live = CHECKOUT_ON() && p.shopify;
+    const link = p.buy || p.etsy;
+    const cta = live ? `<div class="buy" data-buy="${p.n}"></div>`
+      : link ? `<a class="btn red" href="${link}" target="_blank" rel="noopener" aria-label="Buy it now: ${p.name}">Buy it now</a>`
       : `<span class="soon" aria-label="${p.name} is coming soon">Coming soon</span>`;
     el.innerHTML = `<span class="num">No. ${p.n}</span>
       <div class="img"><img src="${p.img}" alt="${p.name} preview" loading="lazy"></div>
       <div class="body"><h3>${p.name}</h3><p class="meta">${p.meta}</p>
       <div class="row"><span class="price">$${p.price}</span>${cta}</div></div>`;
     grid.appendChild(el);
+    if (live) mountBuy(p, el.querySelector(".buy"));
   });
 }
 const btns = [...document.querySelectorAll(".filters button")];
