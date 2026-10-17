@@ -268,16 +268,13 @@ footer small{color:var(--ash);font:400 .78rem var(--f-type);letter-spacing:.1em}
     <div class="wrap">
       <div>
         <h2 id="su-h">Get Drop 01 first</h2>
-        <p>One email the day the drop goes live, with a launch-day code for 15% off. No spam, unsubscribe any time.</p>
+        <p>Follow us on Instagram or Etsy. We post the drop, and the launch-day code for 15% off, the day it goes live.</p>
       </div>
-      <form name="drop-list" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company" class="su-form">
-        <input type="hidden" name="form-name" value="drop-list">
-        <p class="hp" aria-hidden="true"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
-        <label for="su-email" class="sr">Email address</label>
-        <input id="su-email" type="email" name="email" required placeholder="you@email.com" autocomplete="email">
-        <button class="btn red" type="submit">Notify me</button>
-        <small>By signing up you agree to our <a href="policies.html#privacy">privacy policy</a>.</small>
-      </form>
+      <div class="su-form" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <!-- Email signup form returns once Formspree is connected -->
+        <a class="btn red" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener">Follow @solo_sees</a>
+        <a class="btn" href="https://www.etsy.com/shop/Solosees" target="_blank" rel="noopener">Follow on Etsy</a>
+      </div>
     </div>
   </section>
 </main>
