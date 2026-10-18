@@ -125,6 +125,11 @@ section{padding-block:clamp(44px,7vw,84px)}
 .card .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}
 .price{font:400 1.25rem var(--f-type);font-variant-numeric:tabular-nums}
 .buy{min-width:150px;flex:1 1 150px}
+.card .row.live{flex-direction:column;align-items:stretch;gap:6px}
+.card .row.live .price{font-size:1.5rem}
+.card .row.live .buy{max-width:none!important;width:100%}
+.card .img.photo{background:#fff}
+.card .img.photo img{object-fit:cover}
 .soon{font:400 .78rem var(--f-type);letter-spacing:.16em;text-transform:uppercase;color:var(--ash);border:1px dashed var(--ash);padding:.65em .9em;white-space:nowrap}
 .alert{background:var(--red);color:#fff}
 .alert .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:10px}
@@ -359,17 +364,54 @@ function loadShopify(){
   });
   return shopUI;
 }
-const BTN = { "background-color": "#c8102e", ":hover": { "background-color": "#a50d26" }, ":focus": { "background-color": "#a50d26" },
-  "font-family": "inherit", "text-transform": "uppercase", "letter-spacing": ".12em", "border-radius": "0", "font-size": "13px", "padding-top": "12px", "padding-bottom": "12px" };
+const INK = "#efe9dc", ASH = "#9d978b", SHEET = "#18181a", PAGE = "#0e0e0f", RULE = "#3a393d", RED = "#d2232a", RED2 = "#a81b21";
+const FONTS = ["Archivo Narrow", "Graduate"];
+const BTN = { "background-color": RED, ":hover": { "background-color": RED2 }, ":focus": { "background-color": RED2 },
+  "font-family": "Graduate, Impact, sans-serif", "text-transform": "uppercase", "letter-spacing": ".1em", "border-radius": "0",
+  "font-size": "14px", "padding-top": "14px", "padding-bottom": "14px", "width": "100%", "margin-top": "4px" };
 function mountBuy(p, node){
   loadShopify().then(ui => ui.createComponent("product", {
     id: p.shopify, node, moneyFormat: "%24%7B%7Bamount%7D%7D",
     options: {
-      product: { iframe: true, contents: { img: false, title: false, price: false, options: true, quantity: false, button: true },
-        text: { button: "Add to cart" }, styles: { button: BTN, product: { "text-align": "left" } } },
-      cart: { text: { title: "Your cart", button: "Checkout", notice: "Shipping and taxes calculated at checkout." },
-        styles: { button: BTN }, popup: false },
-      toggle: { styles: { toggle: { "background-color": "#c8102e", ":hover": { "background-color": "#a50d26" } } } }
+      product: {
+        iframe: true, googleFonts: FONTS,
+        contents: { img: false, title: false, price: false, options: true, quantity: false, button: true },
+        text: { button: "Add to cart" },
+        styles: {
+          product: { "text-align": "left", "max-width": "100%", "margin": "0" },
+          button: BTN,
+          options: { "margin-bottom": "4px" },
+          label: { "color": ASH, "font-family": "Archivo Narrow, sans-serif", "text-transform": "uppercase", "letter-spacing": ".14em", "font-size": "11px", "margin-bottom": "4px" },
+          select: { "background-color": PAGE, "color": INK, "border": "1px solid " + RULE, "border-radius": "0",
+            "font-family": "Archivo Narrow, sans-serif", "font-size": "15px", "height": "42px", ":focus": { "border-color": RED } },
+          selectIcon: { "fill": INK }
+        }
+      },
+      cart: {
+        googleFonts: FONTS, popup: false,
+        text: { title: "Your cart", button: "Checkout", total: "Subtotal", empty: "Nothing in here yet.", notice: "Shipping and taxes calculated at checkout." },
+        styles: {
+          cart: { "background-color": SHEET, "border-left": "3px solid " + RED },
+          header: { "color": INK }, title: { "color": INK, "font-family": "Graduate, sans-serif", "text-transform": "uppercase", "letter-spacing": ".06em" },
+          lineItems: { "color": INK }, subtotalText: { "color": ASH, "text-transform": "uppercase", "letter-spacing": ".12em" },
+          subtotal: { "color": INK, "font-family": "Graduate, sans-serif" }, notice: { "color": ASH }, currency: { "color": ASH },
+          close: { "color": INK, ":hover": { "color": RED } }, empty: { "color": ASH },
+          footer: { "background-color": SHEET, "border-top": "1px solid " + RULE },
+          button: BTN
+        }
+      },
+      lineItem: {
+        styles: {
+          variantTitle: { "color": ASH }, title: { "color": INK, "font-family": "Archivo Narrow, sans-serif", "font-weight": "700" },
+          price: { "color": INK }, fullPrice: { "color": INK },
+          quantity: { "color": INK }, quantityIncrement: { "color": INK, "border-color": RULE }, quantityDecrement: { "color": INK, "border-color": RULE },
+          quantityInput: { "color": INK, "background-color": PAGE, "border-color": RULE }
+        }
+      },
+      toggle: {
+        googleFonts: FONTS,
+        styles: { toggle: { "background-color": RED, ":hover": { "background-color": RED2 }, ":focus": { "background-color": RED2 } }, count: { "font-family": "Graduate, sans-serif" } }
+      }
     }
   })).catch(() => { node.innerHTML = `<span class="soon">Coming soon</span>`; });
 }
@@ -385,9 +427,9 @@ function render(f){
       : link ? `<a class="btn red" href="${link}" target="_blank" rel="noopener" aria-label="Buy it now: ${p.name}">Buy it now</a>`
       : `<span class="soon" aria-label="${p.name} is coming soon">Coming soon</span>`;
     el.innerHTML = `<span class="num">No. ${p.n}</span>
-      <div class="img"><img src="${p.img}" alt="${p.name} preview" loading="lazy"></div>
+      <div class="img${p.img.startsWith("http") ? " photo" : ""}"><img src="${p.img}" alt="${p.name} preview" loading="lazy"></div>
       <div class="body"><h3>${p.name}</h3><p class="meta">${p.meta}</p>
-      <div class="row"><span class="price">$${p.price}</span>${cta}</div></div>`;
+      <div class="row${live ? " live" : ""}"><span class="price">$${p.price}</span>${cta}</div></div>`;
     grid.appendChild(el);
     if (live) mountBuy(p, el.querySelector(".buy"));
   });
