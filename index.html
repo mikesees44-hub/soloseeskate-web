@@ -125,6 +125,8 @@ section{padding-block:clamp(44px,7vw,84px)}
 .card .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px}
 .price{font:400 1.25rem var(--f-type);font-variant-numeric:tabular-nums}
 .buy{min-width:150px;flex:1 1 150px}
+.dead-strike{text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:#9be21b;opacity:.85}
+.dead{color:#9be21b;font-weight:700;letter-spacing:.08em;text-shadow:0 0 6px rgba(155,226,27,.6)}
 .card .row.live{flex-direction:column;align-items:stretch;gap:6px}
 .card .row.live .price{font-size:1.5rem}
 .card .row.live .buy{max-width:none!important;width:100%}
@@ -180,7 +182,7 @@ footer small{color:var(--ash);font:400 .78rem var(--f-type);letter-spacing:.1em}
 <div class="grain" aria-hidden="true"></div>
 
 <div class="alert" role="region" aria-label="Drop announcement">
-  <div class="wrap"><p>Drop 01 is coming soon &middot; Tees, hoodies &amp; hats</p><a href="#signup">Get on the drop list &rarr;</a></div>
+  <div class="wrap"><p>Zombie Parm drop is <s class="dead-strike">live</s> <span class="dead">dead</span> &middot; Tee out now</p><a href="#shop">Shop the Zombie Parm tee &rarr;</a></div>
 </div>
 
 <header class="top">
