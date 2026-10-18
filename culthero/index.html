@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cult Hero | Will Keenan</title>
+<meta name="description" content="Cult Hero: official Will Keenan merch and new films from Solo Sees Studios. Tees, posters and stickers, plus Zombie Parm and Before His Time, in production now.">
+<link rel="icon" type="image/png" href="/culthero/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Will Keenan · Cult Hero">
+<meta property="og:description" content="Cult icon. Stunt legend. Still rolling. Official merch and new films from Solo Sees Studios.">
+<meta property="og:url" content="https://soloseeskate.com/culthero/">
+<meta property="og:image" content="https://soloseeskate.com/culthero/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0a09">
+<link rel="canonical" href="https://soloseeskate.com/culthero/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Archivo:wght@400;600;800&display=swap">
+<style>
+/* Grindhouse one-sheet: black stock, bone type, the art's own yellow and olive brush. */
+:root{
+  --ink:#0b0a09; --sheet:#151311; --line:#2a2622;
+  --bone:#ece4d3; --ash:#a39a8a;
+  --yellow:#f1bf2a; --olive:#9aab22; --blood:#c4301f;
+  --f-head:"Bebas Neue",Impact,"Arial Narrow",sans-serif;
+  --f-brush:"Permanent Marker","Brush Script MT",cursive;
+  --f-body:"Archivo",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--ink);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ink);color:var(--bone);font:400 1.04rem/1.6 var(--f-body);overflow-x:hidden}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.08;mix-blend-mode:screen;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--ink) 90%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:40px;height:40px;filter:invert(1)}
+.brand b{font:400 1.35rem/1 var(--f-head);letter-spacing:.06em}
+nav{display:flex;gap:18px}
+nav a{font:600 .78rem var(--f-body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ash)}
+nav a:hover,nav a:focus-visible{color:var(--yellow)}
+@media (max-width:640px){nav{display:none}}
+
+.btn{display:inline-flex;align-items:center;gap:.5em;font:400 1.15rem/1 var(--f-head);letter-spacing:.08em;text-decoration:none;padding:.8em 1.25em;border:2px solid var(--bone);color:var(--bone);transition:background .15s,color .15s,transform .15s}
+.btn:hover,.btn:focus-visible{background:var(--bone);color:var(--ink);transform:translateY(-1px)}
+.btn.y{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+.btn.y:hover,.btn.y:focus-visible{background:var(--bone);border-color:var(--bone)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,56px);align-items:center;padding-block:clamp(28px,5vw,64px)}
+.kicker{font:600 .8rem var(--f-body);letter-spacing:.32em;text-transform:uppercase;color:var(--ash);margin:0 0 10px}
+h1{margin:0;font:400 clamp(4.2rem,12vw,9.5rem)/.82 var(--f-head);letter-spacing:.01em;color:var(--yellow);text-shadow:0 0 1px rgba(0,0,0,.6)}
+.stroke{display:inline-block;margin:14px 0 0 -6px;padding:.12em .55em .18em;font:400 clamp(1.6rem,4.4vw,2.6rem)/1 var(--f-brush);color:var(--ink);background:var(--olive);transform:rotate(-3deg);clip-path:polygon(2% 8%,98% 0,100% 88%,4% 100%,0 55%)}
+.lede{max-width:34ch;margin:22px 0 8px;font-size:1.15rem;color:#d8cfbd}
+.roles{font:400 1.25rem var(--f-head);letter-spacing:.2em;color:var(--bone);margin:0 0 26px}
+.roles span{color:var(--blood)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative}
+.hero-art img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;-webkit-mask-image:radial-gradient(120% 90% at 50% 40%,#000 62%,transparent 100%);mask-image:radial-gradient(120% 90% at 50% 40%,#000 62%,transparent 100%)}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1;max-width:420px;margin:0 auto}}
+
+/* sections */
+section{padding:clamp(48px,7vw,96px) 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 24px;margin-bottom:28px}
+h2{margin:0;font:400 clamp(2.6rem,7vw,4.6rem)/.9 var(--f-head);letter-spacing:.02em}
+h2 em{font-style:normal;color:var(--yellow)}
+.sub{margin:0;color:var(--ash);max-width:48ch}
+
+/* shop */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.card{background:var(--sheet);border:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
+.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--yellow)}
+.card .ph{aspect-ratio:1/1;background:#e9e6df;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .meta{padding:12px 14px 14px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card h3{margin:0;font:600 .95rem/1.3 var(--f-body)}
+.card .p{font:400 1.3rem var(--f-head);color:var(--yellow);white-space:nowrap}
+.shop-all{margin-top:24px}
+
+/* in production */
+.prod{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(20px,3vw,36px);align-items:start}
+.reel{position:relative;background:#000;border:1px solid var(--line)}
+.reel video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+.tag{display:inline-block;font:600 .72rem var(--f-body);letter-spacing:.24em;text-transform:uppercase;padding:.45em .8em;background:var(--blood);color:#fff}
+.film h3{margin:12px 0 4px;font:400 clamp(2.2rem,5vw,3.4rem)/.95 var(--f-head);letter-spacing:.02em}
+.film .by{margin:0 0 12px;color:var(--ash);font-size:.92rem}
+.film blockquote{margin:0 0 14px;padding-left:14px;border-left:3px solid var(--olive);font-size:1.08rem;font-style:italic;color:#ddd3bf}
+.poster{border:1px solid var(--line);width:100%;height:auto}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.second{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(20px,3vw,36px);align-items:center;margin-top:clamp(40px,6vw,72px);padding-top:clamp(32px,5vw,56px);border-top:1px dashed var(--line)}
+@media (max-width:820px){.prod,.second{grid-template-columns:1fr}.second .poster{max-width:360px}}
+
+/* filmography marquee */
+.films{padding:22px 0;overflow:hidden;border-bottom:1px solid var(--line);background:var(--sheet)}
+.track{display:flex;gap:42px;width:max-content;animation:roll 38s linear infinite;font:400 clamp(1.4rem,3vw,2rem) var(--f-head);letter-spacing:.12em;color:var(--ash)}
+.track b{color:var(--yellow);font-weight:400}
+@keyframes roll{to{transform:translateX(-50%)}}
+
+/* founders */
+.founders{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.f{background:var(--sheet);border:1px solid var(--line);padding:22px 20px}
+.f .rel{font:600 .72rem var(--f-body);letter-spacing:.24em;text-transform:uppercase;color:var(--olive)}
+.f h3{margin:6px 0 6px;font:400 2.2rem/1 var(--f-head);letter-spacing:.03em}
+.f p{margin:0;color:var(--ash);font-size:.95rem}
+.studio{margin-top:26px;font:400 clamp(1.5rem,3.6vw,2.2rem)/1.2 var(--f-brush);color:var(--bone);max-width:30ch}
+.studio span{color:var(--yellow)}
+@media (max-width:760px){.founders{grid-template-columns:1fr}}
+
+/* then & now */
+.faces{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;align-items:end}
+.faces figure{margin:0}
+.faces img{width:100%;height:auto;border:1px solid var(--line);background:var(--sheet)}
+.faces .cart{border:0;background:none}
+.faces figcaption{margin-top:8px;font:600 .72rem var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--ash)}
+@media (max-width:700px){.faces{grid-template-columns:1fr 1fr}.faces figure:first-child{grid-column:1/-1}}
+
+/* follow */
+.follow{display:flex;flex-wrap:wrap;gap:12px}
+.soc{display:flex;align-items:center;gap:12px;text-decoration:none;border:1px solid var(--line);background:var(--sheet);padding:14px 18px;min-width:240px;flex:1 1 240px;transition:border-color .15s}
+.soc:hover,.soc:focus-visible{border-color:var(--yellow)}
+.soc svg{width:26px;height:26px;flex:none}
+.soc b{display:block;font:400 1.35rem/1 var(--f-head);letter-spacing:.06em}
+.soc small{color:var(--ash)}
+
+footer{padding:36px 0 calc(36px + env(safe-area-inset-bottom));color:var(--ash);font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:var(--bone)}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Cult Hero home"><img src="logo.png" alt="" width="40" height="40"><b>CULT HERO</b></a>
+    <nav aria-label="Sections">
+      <a href="#shop">Shop</a><a href="#production">In Production</a><a href="#founders">Founders</a><a href="#follow">Follow</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">45 years of cult classics</p>
+        <h1>WILL<br>KEENAN</h1>
+        <span class="stroke">CULT HERO</span>
+        <p class="lede">Cult icon. Stunt legend. Still rolling. Official merch and brand-new films from Solo Sees Studios.</p>
+        <p class="roles">ACTOR <span>•</span> STUNTMAN <span>•</span> CULT HERO</p>
+        <div class="ctas">
+          <a class="btn y" href="#shop">Shop the merch</a>
+          <a class="btn" href="#production">Watch the teaser</a>
+        </div>
+      </div>
+      <div class="hero-art"><img src="hero.jpg" alt="Painted portrait of Will Keenan with WILL KEENAN CULT HERO brush lettering" width="1200" height="1800" fetchpriority="high"></div>
+    </div>
+  </div>
+
+  <div class="films" aria-label="Selected films">
+    <div class="track" aria-hidden="true">
+      <span><b>Tromeo &amp; Juliet</b></span><span>Amityville Aliens</span><span><b>Johnny X</b></span><span>Law &amp; Order</span><span><b>Chop</b></span><span>Operation Midnight Climax</span><span><b>Zombie Parm</b></span><span>Before His Time</span>
+      <span><b>Tromeo &amp; Juliet</b></span><span>Amityville Aliens</span><span><b>Johnny X</b></span><span>Law &amp; Order</span><span><b>Chop</b></span><span>Operation Midnight Climax</span><span><b>Zombie Parm</b></span><span>Before His Time</span>
+    </div>
+    <p class="sr" style="position:absolute;left:-9999px">Selected films: Tromeo &amp; Juliet, Amityville Aliens, Johnny X, Law &amp; Order, Chop, Operation Midnight Climax. Coming: Zombie Parm, Before His Time.</p>
+  </div>
+
+  <section id="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="shop-h">THE <em>MERCH</em></h2>
+        <p class="sub">Official Will Keenan gear, printed to order and shipped from the USA.</p>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/tromeo-flaming-heart-tee" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/-A4INbSe7WGRNDAOvKenFufsJCimOMweN26uDLJvA9E/w:720/sm:1/enc/jZSKe964RAeNnFlI/-khbSVwN2TvaC2H_/-lAwxhU31TF3d1C7/hbNpOLqICbnCIE-w/b6ELkrSMlgVABgF-/emoBffo_MQ5bZUtv/MWuIEXq1_YwGED_N/aNDfXchVHZY2Kljx/D7-vHCJB8of41fQi/XdLhgIK5ls-JIDeB/9ST-FV87VtmN6CYQ/PFSX8KVwArG5SW4g/0okiGEICr-P2Un03/2EPx4Ia9WJhWW34J/Up7D3NHQvQg.jpg" alt="Tromeo Flaming Heart Tee" loading="lazy" width="720" height="720"></div><div class="meta"><h3>Tromeo Flaming Heart Tee</h3><span class="p">$32.99</span></div></a>
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/will-keenan-cult-hero-tee" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/3EaezezUE5fER7X0RxJiIel07HagiKYjuYSeVOcQOu4/w:720/sm:1/enc/gMwSlzRzq411Byu7/uf-wOQf4HHTxH6h7/ZMxG129AO4A2dMGI/1wqk8DGzRkrK5DM1/GLSlCdf3ZbSMd-ms/ZqfbO6mRkjEaUbNM/9xTpIUgsNpzcnVWb/J3vcY6L2cuJgGL6z/WnLbUWrqjjb4NTm3/E0loMMaiFqNlKm_D/bIQZGXg7mYsLs-bl/V2pHumQYrFlya0UM/NfHh1z2g1_AoCShY/buNNrz7EyiC8wNSX/xoQ2qxtRmA8.jpg" alt="Will Keenan Cult Hero Tee" loading="lazy" width="720" height="720"></div><div class="meta"><h3>Will Keenan Cult Hero Tee</h3><span class="p">$27.99</span></div></a>
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/cult-hero-logo-tee" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/Xo7gzcVanYR1Yf-765LVmIQIyDshHC9PfPpiGWExm7I/w:720/sm:1/enc/5vOyeJxklKVkf3Fz/C0rDqmiV_GyQzAFW/plst7B6ddmsgHh0y/8vBVwT6XsSlc0CjJ/jcLzLB10_wV11_mD/3dgtwW-mjcmNdY8Q/rICjLVWTa7IerFw8/Smpx6nyewB7L69JY/CcT1rifQHBTeXIOF/RHgNmT8GObpWIGBN/pKex66t8I0MdWaZt/z9AYXTYlsHwmjMkA/TfgXA25J48sCknwM/WWL31r5XzfD9ksg8/r6g6ykD9KG8.jpg" alt="Cult Hero Logo Tee" loading="lazy" width="720" height="720"></div><div class="meta"><h3>Cult Hero Logo Tee</h3><span class="p">$24.99</span></div></a>
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/will-keenan-cult-hero-poster-12x18" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/UnI8Q35i_B-XRQ5_oL93RVl7iA0nE5e2bJfmNfYGzMU/w:720/sm:1/enc/JWDp2zvfRqm21iYV/kdznKK1xYQ1KeyMP/gxOlglF_Ge5wLwD0/EgKgMUw464LoDmL2/FQj5uv6DIuk5gZnK/vtno6qKR2Ii2OvGS/4K8EHdh9CV-pHBsF/24Lf6oIXAPgQOEwt/OGzAb_S58ga_zxSG/N1xTyBeqsPg9nFJf/j1djt8M-oSnZmcp8/d1jTXoiBEHR-Femb/XRVXugDkNfXXYwRD/thqLcfOBWqKR5GMA/lIh6NMlY7_4.jpg" alt="Cult Hero Poster 12×18" loading="lazy" width="720" height="720"></div><div class="meta"><h3>Cult Hero Poster 12×18</h3><span class="p">$24.99</span></div></a>
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/will-keenan-the-legend-returns-poster-12x18" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/K98AdiWcLHCuJaLcueqoXMtwOW8WtYT9jvBeJVtxrdg/w:720/sm:1/enc/qgilt9S81NoEtKo7/x0N7C1ENYJEvkbXN/Y9lyweVkkjSKAhSM/Nc1V_fYHvQx5J5Mr/PVGgt0ejMXfn7OCo/rIn4VmniwBfZ3E0N/EfibZpfTDvvSLg0E/eI6BB4zPFkILwTbk/cN1KNKCAJjTbG49p/4K8Y8YSNVEVj0NE3/l6JH4EIHFSVkweSc/4PnAmLC__P0J9F93/H18TkPzBWZPSDNz_/ON7J8yzu31F1RogS/3H0hK64EXgM.jpg" alt="The Legend Returns Poster 12×18" loading="lazy" width="720" height="720"></div><div class="meta"><h3>The Legend Returns Poster 12×18</h3><span class="p">$24.99</span></div></a>
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/will-keenan-cult-hero-sticker" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/LklI0duRkpBF8cdCf58V_1qnLWO47jy-0bC4YJIpvko/w:720/sm:1/enc/HkWPjOr27pWk42LZ/OmuEj9XX-x7wnaZz/Hm_FSH5OnFZs8knX/LBuVeGPHfrEVygDS/E3GilICuOK6GjMmO/cImP_IYcwDX-95CK/E_fOwPlWIRc48hVJ/F2dLFBV9oHtAY7d2/5zRZQNQEXQEN8DVc/mEdC2mcsJP7uOF2b/vol4N3MeCXT5RycR/BP3BOSfgMrL8jf9z/jghPXizumaWUEz80/1C-fal6Pl3hhVzqr/Xh7jSvTRJ3I.jpg" alt="Will Keenan Cult Hero Sticker" loading="lazy" width="720" height="720"></div><div class="meta"><h3>Will Keenan Cult Hero Sticker</h3><span class="p">$5.99</span></div></a>
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/cult-hero-logo-sticker" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/Tp8e7DQrC4J5y78oEFmcGyKGwOnzMyGHnKDi4-602Mc/w:720/sm:1/enc/MyNKydGLXopqEkih/WzwgmPUUAMyctF4m/3ZCmFie0jsDmxNY5/ouXzBY0nkSPHP6VB/S2_EIYgXVKtNtI0s/8g-4i9cAzBMhgvXN/qxnUTdv1gFF0o2-_/IwY_KD-6eFiPPjm0/4NU9RAf3C1Rt8xUJ/C1J8giYYbXiofgga/dyUC4LI5AWZ7OP82/6FzlnNrLm51dOxOD/P4SrExTplkUe5PLt/CHnmIQCBmuJIyeGg/8pXa4AXg0w8.jpg" alt="Cult Hero Logo Sticker" loading="lazy" width="720" height="720"></div><div class="meta"><h3>Cult Hero Logo Sticker</h3><span class="p">$5.99</span></div></a>
+        <a class="card" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/will-keenan-cartoon-portrait-sticker" target="_blank" rel="noopener"><div class="ph"><img src="https://imgproxy.fourthwall.dev/LiwZT-9rfc3HEkA4-f6YTIVehtw7v0lVmAyPPXizL1I/w:720/sm:1/enc/_H7zPbOTuAhHBJdQ/Q-E_9SuT7bss7YO_/ufT1tvFuA2RYW51s/4Koh5U6Ads0cSE7A/jXfk2Adb3gTqsAfB/ohLCpnraaqKTMheZ/nsx61aZv7nBUb6qw/-xUy9F8Q2DeuGdN9/6IL7AdP-kw1ODngl/RVMKSJdkp_yhNjLf/mjHDBvyrilORRs3O/zpTH8T2pQwpNMKnj/TpXTErD37RZMOALi/od4_YenPA1_jfmjv/lwx9_czUACg.jpg" alt="Cartoon Portrait Sticker" loading="lazy" width="720" height="720"></div><div class="meta"><h3>Cartoon Portrait Sticker</h3><span class="p">$5.99</span></div></a>
+      </div>
+      <div class="shop-all"><a class="btn y" href="https://solo-sees-studios-llc-shop.fourthwall.com/collections/all" target="_blank" rel="noopener">Shop everything</a></div>
+    </div>
+  </section>
+
+  <section id="production" aria-labelledby="prod-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="prod-h">COMING SOON <em>/ IN PRODUCTION</em></h2>
+        <p class="sub">New films from Solo Sees Studios, starring Will Keenan.</p>
+      </div>
+
+      <div class="prod">
+        <div>
+          <div class="reel">
+            <video controls playsinline preload="metadata" poster="zombie-parm-teaser.jpg">
+              <source src="zombie-parm-teaser.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="film">
+            <span class="tag">In production</span>
+            <h3>ZOMBIE PARM</h3>
+            <p class="by">Written by Michael Sees &amp; Will Keenan · Horror comedy feature</p>
+            <blockquote>Love in the time of the subscription economy. A zombie comedy for the age of the algorithm.</blockquote>
+            <p class="by">Concept teaser above. Doom scrolling never tasted so good.</p>
+          </div>
+        </div>
+        <img class="poster" src="zombie-parm-poster.jpg" alt="Zombie Parm poster: a grinning zombie in sunglasses eats eggplant parm in a diner while zombies swarm outside" width="880" height="1191" loading="lazy">
+      </div>
+
+      <div class="second">
+        <img class="poster" src="before-his-time.jpg" alt="Before His Time poster: Will Keenan seated on a gothic throne between velvet curtains" width="704" height="1530" loading="lazy">
+        <div class="film">
+          <span class="tag">Coming soon</span>
+          <h3>BEFORE HIS TIME</h3>
+          <p class="by">Starring Will Keenan · A Solo Sees Studios production</p>
+          <blockquote>When you're cousins with Tromeo, the side quests are just as fun as the main story.</blockquote>
+          <div class="duo">
+            <img class="poster" src="legend-poster.jpg" alt="Will Keenan Coming Soon poster: The Legend Returns" width="900" height="1350" loading="lazy">
+            <div><p class="by" style="margin-top:0">Cult icon. Stunt legend. Still rolling. The legend returns.</p><a class="btn" href="https://solo-sees-studios-llc-shop.fourthwall.com/products/will-keenan-the-legend-returns-poster-12x18" target="_blank" rel="noopener">Get the poster</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="founders" aria-labelledby="fd-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="fd-h">TWO BROTHERS <em>&amp; A COUSIN</em></h2>
+        <p class="sub">Solo Sees Studios is a family outfit: an indie film production company, a brand, and whatever's coming next.</p>
+      </div>
+      <div class="founders">
+        <div class="f"><span class="rel">Co-founder · Brother</span><h3>JOE SEES</h3><p>Co-founder of Solo Sees Studios.</p></div>
+        <div class="f"><span class="rel">Co-founder · Brother</span><h3>MICHAEL SEES</h3><p>Writer and co-founder. Co-wrote Zombie Parm.</p></div>
+        <div class="f"><span class="rel">Co-founder · Cousin</span><h3>WILL KEENAN</h3><p>Actor, stuntman and the Cult Hero himself. Co-wrote Zombie Parm.</p></div>
+      </div>
+      <p class="studio">Founded by family. <span>Built on passion. Driven by chaos.</span></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="tn-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="tn-h">THEN <em>&amp; NOW</em></h2></div>
+      <div class="faces">
+        <figure><img src="will-90s.jpg" alt="Black and white portrait of a young Will Keenan" width="453" height="312" loading="lazy"><figcaption>The '90s</figcaption></figure>
+        <figure><img src="will-now.jpg" alt="Will Keenan in a grey suit and blue glasses against a brick wall" width="554" height="554" loading="lazy"><figcaption>Now</figcaption></figure>
+        <figure><img class="cart" src="will-cartoon.png" alt="Illustrated cartoon portrait of Will Keenan in blue glasses" width="512" height="640" loading="lazy"><figcaption>Sticker form</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="follow" aria-labelledby="fo-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="fo-h">FOLLOW <em>WILL</em></h2><p class="sub">Behind the scenes, set days and what's next.</p></div>
+      <div class="follow">
+        <a class="soc" href="https://www.instagram.com/willkeenan/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span><b>INSTAGRAM</b><small>@willkeenan</small></span></a>
+        <a class="soc" href="https://www.threads.com/@willkeenan" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 8.5C16 5.5 13.6 4 11.6 4 7.5 4 5 7.2 5 12s2.5 8 6.8 8c3.4 0 6.2-2.2 6.2-5.3 0-3-2.7-4.4-5.6-4.4-2.4 0-4 1.2-4 2.9 0 1.6 1.4 2.6 3 2.6 2.6 0 3.8-2 3.8-5.6"/></svg><span><b>THREADS</b><small>@willkeenan</small></span></a>
+        <a class="soc" href="https://www.instagram.com/solo_sees/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span><b>SOLO SEES STUDIOS</b><small>@solo_sees</small></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Solo Sees Studios LLC · Cult Hero is a Solo Sees Studios line, made with Will Keenan.</span>
+    <span><a href="/">Solo Sees Skate Division</a> · <a href="https://solo-sees-studios-llc-shop.fourthwall.com/" target="_blank" rel="noopener">Store</a></span>
+  </div>
+</footer>
+</body>
+</html>
